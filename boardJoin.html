@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-container">
+            <h1>회원가입</h1>
+            <form id="login-form" method="post" action="boardJoin.php">
+                <input type="text" name="userid" placeholder="id" required>
+                <input type="password" name="passwd" placeholder="비밀번호" required>
+                <input type="password" name="repasswd" placeholder="비밀번호 확인" required>
+                <input type="submit" value="회원가입">
+                <div class="link-wrapper">
+                    <a href="boardlogin.html">로그인으로</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

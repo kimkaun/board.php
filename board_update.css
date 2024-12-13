@@ -1,0 +1,96 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 제목 스타일 */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* 폼 컨테이너 */
+.content-container {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    color: #555;
+    width: 20%;
+    vertical-align: top;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* 텍스트 영역 */
+textarea {
+    resize: none;
+}
+
+/* 버튼 스타일 */
+input[type="submit"] {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #212427;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #5d5f61;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .content-container {
+        width: 90%;
+    }
+
+    input[type="text"], 
+    input[type="password"], 
+    textarea {
+        width: 100%;
+    }
+}

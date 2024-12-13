@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 60%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+td:first-child {
+    text-align: left;
+    font-weight: bold;
+    width: 15%;
+}
+
+td:last-child {
+    text-align: left;
+}
+
+input[type="text"], 
+input[type="password"], 
+textarea, 
+select, 
+input[type="file"] {
+    width: 90%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.board-image {
+    width: 70px;
+    height: auto;
+}
+
+/* 작성완료 버튼 */
+#submit-button {
+    padding: 10px 20px;
+    margin-left: 10px; /* 버튼 간의 간격 */
+    border: none;
+    background-color: #212427; 
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #5d5f61; 
+}
+
+/* 다시입력 버튼 */
+#reset-button {
+    padding: 10px 20px;
+    margin-left: 10px; /* 버튼 간의 간격 */
+    border: none;
+    background-color: #212427; 
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #5d5f61; 
+}
+
+/* 버튼 오른쪽 정렬 */
+td {
+    text-align: right; /* 버튼을 오른쪽으로 정렬 */
+}

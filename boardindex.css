@@ -1,0 +1,105 @@
+/* 기본적인 스타일 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* 배경과 글꼴 설정 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fad5; /* 배경 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 전체 컨테이너 스타일 */
+.table-container {
+    width: 80%;
+    max-width: 1000px;
+    background-color: #ffffff; /* 하얀색 배경 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 제목 스타일 */
+h2 {
+    color: #000000;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* 테이블 헤더 스타일 */
+th {
+    background-color: #b1b4b6;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 테이블 데이터 셀 스타일 */
+td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 이미지 스타일 */
+td img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;  /* 이미지에 호버 효과 추가 */
+}
+
+td img:hover {
+    transform: scale(1.1);  /* 이미지 확대 효과 */
+}
+
+/* 테이블 호버 효과 */
+tr:hover {
+    background-color: #ececec;
+    transition: background-color 0.3s ease;
+}
+
+/* 버튼 컨테이너 */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* 게시물 작성 버튼 */
+.button-container a {
+    text-decoration: none;
+}
+
+input[type="submit"].button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #212427;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="submit"].button:hover {
+    background-color: #5d5f61;
+}
