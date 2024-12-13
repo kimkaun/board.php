@@ -22,6 +22,15 @@ if ($id > 0) {
         $created_at = $row['created_at'];
         $content = nl2br($row['content']);  // 줄바꿈 처리
         $views = $row['views'];  // 조회수
+
+        // 이미지 데이터 처리
+        $file_name = !empty($row['file_name']) ? $row['file_name'] : null;
+        if ($file_name) {
+            $image_path = "uploads/" . $file_name; // 이미지 경로 설정
+            $image_html = "<img src='$image_path' alt='첨부 이미지' style='max-width: 300px; height: auto;'>";
+        } else {
+            $image_html = "이미지 없음";
+        }
     } else {
         echo "<script>alert('존재하지 않는 게시글입니다.');</script>";
         echo "<meta http-equiv='refresh' content='0;URL=boardindex.php'>"; // 게시판 목록 페이지로 돌아가기
@@ -37,6 +46,7 @@ if ($id > 0) {
 mysqli_close($conn);
 ?>
 
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -49,22 +59,34 @@ mysqli_close($conn);
       <div class="content-container">
           <h2>게시글 상세보기</h2>
           <table border=1>
-              <tr>
-                  <th>제목</th>
-                  <td><?php echo htmlspecialchars($title); ?></td>
-              </tr>
-              <tr>
-                  <th>작성자</th>
-                  <td><?php echo htmlspecialchars($name); ?></td>
-              </tr>
-              <tr>
-                  <th>작성일</th>
-                  <td><?php echo $created_at; ?></td>
-              </tr>
-              <tr>
-                  <th>내용</th>
-                  <td><?php echo $content; ?></td>
-              </tr>
+                <tr>
+                    <th>제목</th>
+                    <td><?php echo htmlspecialchars($title); ?></td>
+                </tr>
+                <tr>
+                    <th>작성자</th>
+                    <td><?php echo htmlspecialchars($name); ?></td>
+                </tr>
+                <tr>
+                    <th>작성일</th>
+                    <td><?php echo $created_at; ?></td>
+                </tr>
+                <tr>
+                    <th>내용</th>
+                    <td><?php echo $content; ?></td>
+                </tr>
+                <tr>
+                    <th>이미지</th>
+                    <td>
+                        <?php if ($file_name): ?>    <!--업로드된 파일이 있는 경우-->
+                            <a href="uploads/<?php echo htmlspecialchars($file_name); ?>" download="<?php echo htmlspecialchars($file_name); ?>">
+                                <img src="uploads/<?php echo htmlspecialchars($file_name); ?>" alt="첨부 이미지" style="max-width: 300px; height: auto;">
+                            </a>
+                        <?php else: ?>      <!--업로드된 파일이 없는 경우-->
+                            이미지 없음
+                        <?php endif; ?>
+                    </td>
+                </tr>
           </table>
           <a href="boardindex.php">
                 <input type="button" class="button" value="목록으로 돌아가기">
